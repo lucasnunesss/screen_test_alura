@@ -35,5 +35,12 @@ public class Principal {
 			temporadas.add(dadosTemporada);
 		}
 		temporadas.forEach(System.out::println);
+
+        for(int i = 0; i < dados.totalTemporadas; i++){
+            List<DadosEpisodio> episodiosTemporada = temporadas.get(i).episodios();
+            for(int j = 0; j < episodiosTemporada.size(); j++){
+                System.out.println(episodiosTemporada.get(j).titulo());
+            }
+        }
     }
 }
