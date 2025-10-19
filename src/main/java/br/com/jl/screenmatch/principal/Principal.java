@@ -1,5 +1,6 @@
 package br.com.jl.screenmatch.principal;
 
+import br.com.jl.screenmatch.model.DadosEpisodio;
 import br.com.jl.screenmatch.model.DadosSerie;
 import br.com.jl.screenmatch.model.DadosTemporada;
 import br.com.jl.screenmatch.service.ConsumoApi;
@@ -36,7 +37,7 @@ public class Principal {
 		}
 		temporadas.forEach(System.out::println);
 
-        for(int i = 0; i < dados.totalTemporadas; i++){
+        for(int i = 0; i < dados.totalTemporadas(); i++){
             List<DadosEpisodio> episodiosTemporada = temporadas.get(i).episodios();
             for(int j = 0; j < episodiosTemporada.size(); j++){
                 System.out.println(episodiosTemporada.get(j).titulo());
