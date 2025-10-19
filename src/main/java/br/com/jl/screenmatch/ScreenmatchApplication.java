@@ -1,6 +1,7 @@
 package br.com.jl.screenmatch;
 
 import br.com.jl.screenmatch.model.DadosSerie;
+import br.com.jl.screenmatch.model.DadosEpisodio;
 import br.com.jl.screenmatch.service.ConsumoApi;
 import br.com.jl.screenmatch.service.CoverteDados;
 import org.springframework.boot.CommandLineRunner;
@@ -24,5 +25,9 @@ public class ScreenmatchApplication implements CommandLineRunner {
 		CoverteDados conversor = new CoverteDados();
 		DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
 		System.out.println(dados);
+
+		json = consumoApi.obterDados("https://www.omdbapi.com/?t=gilmore+girls&Season=1&episode=2&apikey=d4daf175");
+		DadosEpisodio dadosEpisodio = conversor.obterDados(json, DadosEpisodio.class);
+		System.out.println(dadosEpisodio);
 	}
 }
