@@ -1,5 +1,9 @@
 package br.com.jl.screenmatch.principal;
 
+import br.com.jl.screenmatch.model.DadosSerie;
+import br.com.jl.screenmatch.service.ConsumoApi;
+import br.com.jl.screenmatch.service.CoverteDados;
+
 import java.util.Scanner;
 
 public class Principal {

@@ -1,16 +1,12 @@
 package br.com.jl.screenmatch;
 
-import br.com.jl.screenmatch.model.DadosSerie;
-import br.com.jl.screenmatch.model.DadosEpisodio;
-import br.com.jl.screenmatch.model.DadosTemporada;
-import br.com.jl.screenmatch.service.ConsumoApi;
-import br.com.jl.screenmatch.service.CoverteDados;
+
+import br.com.jl.screenmatch.principal.Principal;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootApplication
 public class ScreenmatchApplication implements CommandLineRunner {
