@@ -7,10 +7,12 @@ import br.com.jl.screenmatch.service.ConsumoApi;
 import br.com.jl.screenmatch.service.CoverteDados;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 public class Principal {
+
     private Scanner leitura = new Scanner(System.in);
     private ConsumoApi consumo = new ConsumoApi();
     private CoverteDados conversor = new CoverteDados();
@@ -19,7 +21,7 @@ public class Principal {
     public void exibeMenu(){
        
         
-        
+        /*
         System.out.println("Digite o nome da série para busca");
         var nomeSerie = leitura.nextLine();
   
@@ -40,5 +42,18 @@ public class Principal {
      
 
         temporadas.forEach(t -> t.episodios().forEach(e -> System.out.println(e.titulo())));
+
+         */
+
+        List<String> nomes = Arrays.asList("Ana", "Leticia", "Lucas", "Paulo", "Roberto"); /* fluxo de dados */
+        nomes.stream()
+                .sorted()
+                .forEach(System.out::println);
+
+        /*
+        (parametro) -> expressao (o que vai acontecer dado a esse parametro)
+        Temporada((parametro é cada uma das temporadas))
+        Episodios((parametro é cada episodio))
+         */
     }
 }

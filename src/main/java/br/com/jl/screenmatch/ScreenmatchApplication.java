@@ -7,6 +7,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Function;
+
 
 @SpringBootApplication
 public class ScreenmatchApplication implements CommandLineRunner {
@@ -15,11 +20,16 @@ public class ScreenmatchApplication implements CommandLineRunner {
 		SpringApplication.run(ScreenmatchApplication.class, args);
 	}
 
+
+
+
+
 	@Override
 	public void run(String... args) throws Exception {
+
 		Principal principal = new Principal();
 		principal.exibeMenu(); 
+		
 
-	
 	}
 }
