@@ -72,11 +72,15 @@ public class Principal {
 
         System.out.println("Digite um trecho do título do episódio");
         var trechoTitulo = leitura.nextLine();
-         episodios.stream()
+        Optional<Episodio> episodioBuscado = episodios.stream()
                 .filter(e -> e.getTitulo().contains(trechoTitulo))
-                .findFirst();
-
-         /*
+                .findFirst();// Com optional nós vamos guardar um episodio e verificar se realmente tem um objeto la dentro ou não
+        if (episodioBuscado.isPresent()){
+            System.out.println("Episodio encontrado!");
+            System.out.println("Temporada: " + episodioBuscado.get().getTemporada());
+        } else {
+            System.out.println("Episódio não encontrado");
+        }          /*
 
         System.out.println("A partir de que ano você deseja ver os episódios? ");
         var ano = leitura.nextInt();
