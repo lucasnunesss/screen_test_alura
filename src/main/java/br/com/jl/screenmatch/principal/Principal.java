@@ -48,11 +48,12 @@ public class Principal {
                  .flatMap(t -> t.episodios().stream())
                  .collect(Collectors.toList());
 
-        System.out.println("\nTop 5 episódios");
+        System.out.println("\nTop 10 episódios");
          dadosEpisodios.stream()
                          .filter(e -> !e.avaliacao().equalsIgnoreCase("N/A"))
                          .sorted(Comparator.comparing(DadosEpisodio::avaliacao).reversed())
-                        .limit(5)
+                        .limit(10)
+                        .map(e -> e.titulo().toUpperCase())
                         .forEach(System.out::println);
 
          List<Episodio> episodios = temporadas.stream()
