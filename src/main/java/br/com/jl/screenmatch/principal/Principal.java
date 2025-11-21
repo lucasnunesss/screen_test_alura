@@ -69,6 +69,13 @@ public class Principal {
 
          episodios.forEach(System.out::println);
 
+
+        System.out.println("Digite um trecho do título do episódio");
+        var trechoTitulo = leitura.nextLine();
+         episodios.stream()
+                .filter(e -> e.getTitulo().contains(trechoTitulo))
+                .findFirst();
+
          /*
 
         System.out.println("A partir de que ano você deseja ver os episódios? ");
