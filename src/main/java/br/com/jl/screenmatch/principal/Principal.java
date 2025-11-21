@@ -56,6 +56,7 @@ public class Principal {
                         .map(e -> e.titulo().toUpperCase())
                         .forEach(System.out::println);
 
+/*
          List<Episodio> episodios = temporadas.stream()
                 .flatMap(t -> t.episodios().stream()
                         .map(d -> new Episodio(t.numero(), d)).sorted(Comparator.comparing(Episodio::getAvaliacao))
