@@ -113,7 +113,7 @@ public class Principal {
        Map<Integer, Double> avaliacoesPorTemporada = episodios.stream()
                     .collect(Collectors.groupingBy(Episodio::getTemporada, Collectors.averagingDouble(Episodio::getAvaliacao)));
 
-       System.out.println(avaliacoesPorTemporada)             
+       System.out.println(avaliacoesPorTemporada);
          
     }
 }
