@@ -69,7 +69,7 @@ public class Principal {
 
          episodios.forEach(System.out::println);
 
-
+/*
         System.out.println("Digite um trecho do título do episódio");
         var trechoTitulo = leitura.nextLine();
         Optional<Episodio> episodioBuscado = episodios.stream()
@@ -111,6 +111,7 @@ public class Principal {
         */
 
        Map<Integer, Double> avaliacoesPorTemporada = episodios.stream()
+                    .filter(e -> e.getAvaliacao() > 0.0)
                     .collect(Collectors.groupingBy(Episodio::getTemporada, Collectors.averagingDouble(Episodio::getAvaliacao)));
 
        System.out.println(avaliacoesPorTemporada);
