@@ -73,7 +73,7 @@ public class Principal {
         System.out.println("Digite um trecho do título do episódio");
         var trechoTitulo = leitura.nextLine();
         Optional<Episodio> episodioBuscado = episodios.stream()
-                .filter(e -> e.getTitulo().contains(trechoTitulo))
+                .filter(e -> e.getTitulo().toUpperCase().contains(trechoTitulo.toUpperCase()))
                 .findFirst();// Com optional nós vamos guardar um episodio e verificar se realmente tem um objeto la dentro ou não
         if (episodioBuscado.isPresent()){
             System.out.println("Episodio encontrado!");
