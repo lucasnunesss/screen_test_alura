@@ -48,6 +48,7 @@ public class Principal {
                  .flatMap(t -> t.episodios().stream())
                  .collect(Collectors.toList());
 
+/*
         System.out.println("\nTop 10 episódios");
          dadosEpisodios.stream()
                          .filter(e -> !e.avaliacao().equalsIgnoreCase("N/A"))
@@ -59,14 +60,16 @@ public class Principal {
                         .map(e -> e.titulo().toUpperCase())
                         .peek(e -> System.out.println("Mapeamento " + e))
                         .forEach(System.out::println);
+*/
 
-/*
          List<Episodio> episodios = temporadas.stream()
                 .flatMap(t -> t.episodios().stream()
                         .map(d -> new Episodio(t.numero(), d)).sorted(Comparator.comparing(Episodio::getAvaliacao))
                 ).collect(Collectors.toList());
 
          episodios.forEach(System.out::println);
+
+         /*
 
         System.out.println("A partir de que ano você deseja ver os episódios? ");
         var ano = leitura.nextInt();
@@ -80,7 +83,7 @@ public class Principal {
                 .filter(e -> e.getDataLancamento() != null && e.getDataLancamento().isAfter(dataBusca))
                 .forEach(e -> System.out.println("Temporada: " + e.getTemporada() + " Episódio: " + e.getTitulo() + " Data lançamento: " + e.getDataLancamento().format(formatador)));
 
-        /*
+        
         List<String> nomes = Arrays.asList("Jacque", "Iasmin", "Paulo", "Rodrigo", "Nico");
         nomes.stream()
                 .sorted()
@@ -90,10 +93,11 @@ public class Principal {
                 .forEach(System.out::println);
 
 
-        /*
+        
         (parametro) -> expressao (o que vai acontecer dado a esse parametro)
         Temporada((parametro é cada uma das temporadas))
         Episodios((parametro é cada episodio))
-         */
+        */
+         
     }
 }
