@@ -120,7 +120,11 @@ public class Principal {
                     .filter(e -> e.getAvaliacao() > 0.0)
                     .collect(Collectors.summarizingDouble(Episodio::getAvaliacao));
 
-        System.out.println(est);
+        System.out.println("Média: " + est.getAverage());
+        System.out.println("Max: " + est.getMax());
+        System.out.println("Min: " + est.getMin());
+        System.out.println("Quantidade: " + est.getCount());
+
          
     }
 }
